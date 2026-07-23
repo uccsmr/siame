@@ -6,9 +6,9 @@
    ============================================================================ */
 
 window.SIRPC_CONFIG = {
-  API_URL: "https://script.google.com/macros/s/AKfycbyNo9QN3ZXItUwLvPNf5RuIW3QYGShef7Ky-7CF1bnAy9BePesiw-8sux9cir7KNFK5/exec",
+  API_URL: "https://script.google.com/macros/s/AKfycbxvp_4HlClKZv80kdt1t1pe8FpYzsmsyNXSgReNxcuUQVQMqVijrud8tqBrJr76SNb7/exec",
 
-  VERSION: "20260723-HR03",
+  VERSION: "20260723-HR04",
 
   MAX_CUPOS_HORARIO: 4,
 
