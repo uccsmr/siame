@@ -6,7 +6,7 @@
    ============================================================================ */
 
 window.SIRPC_CONFIG = {
-  API_URL: "https://script.google.com/macros/s/AKfycbxvxZeRN9bNvVEwIjVVNkMVXKWiT_W6o7xxxD2YddeyqyLHYxzivajNwMQVPsN59yLt/exec",
+  API_URL: "https://script.google.com/macros/s/AKfycbzdOWE9N8eid9XRRtXoEJEGIjaRvyQSwxHx8Wq7usglelFsayKKEyIg7UfMxn8H_Axr/exec",
 
   VERSION: "20260723-HR04",
 
