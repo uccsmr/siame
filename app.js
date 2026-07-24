@@ -231,13 +231,13 @@
 
       let actionHtml = "";
       if(integral.allVisado){
-        actionHtml = `<div class="note-green">✅ Este está verificado completamente por SIB, APA y E-learning.</div>`;
+        actionHtml = `<div class="note-green">✅ Este está verificado completamente por SIB, APA y AVA.</div>`;
       }else if(integral.active){
         actionHtml = `
           <div class="note-green">
             📌 Cita integral reservada para <b>${htmlEscape(formatDate(integral.active.FechaCita))}</b>,
             bloque <b>${htmlEscape(rangoHorario(integral.active.HoraCita))}</b>, jornada <b>${htmlEscape(integral.active.Jornada)}</b>.<br>
-            Esta única cita aplica para SIB, APA y E-learning.
+            Esta única cita aplica para SIB, APA y AVA.
           </div>
           <div class="actions-row">
             <button class="btn-danger btn-small" data-action="cancelar" data-plan="${idx}">Cancelar cita integral</button>
@@ -245,7 +245,7 @@
         `;
       }else{
         actionHtml = `
-          <div class="note-green">🗓️ Agende una sola cita para que el curso sea revisado por SIB, APA y E-learning.</div>
+          <div class="note-green">🗓️ Agende una sola cita para que el curso sea revisado por SIB, APA y AVA.</div>
           <div class="actions-row">
             <button class="btn-green btn-small" data-action="agendar" data-plan="${idx}">Agendar cita integral</button>
           </div>
@@ -294,7 +294,7 @@
       <h2>🗓️ Agendar cita integral</h2>
       <p class="help">
         Plan: <b>${htmlEscape(plan["Descripción"])}</b><br>
-        Revisión: <b>SIB + APA + E-learning</b><br>
+        Revisión: <b>SIB + APA + AVA</b><br>
         Revisores: ${htmlEscape(REVISORES.SIB)}, ${htmlEscape(REVISORES.APA)} y ${htmlEscape(REVISORES.AVA)}.
       </p>
       <h3>1. Seleccione fecha</h3>
@@ -388,7 +388,7 @@
       });
 
       slotsMsg.className = "msg ok";
-      slotsMsg.textContent = `Cada bloque admite máximo ${MAX_CUPOS} reservas. El mismo horario sirve para SIB, APA e E-learning.`;
+      slotsMsg.textContent = `Cada bloque admite máximo ${MAX_CUPOS} reservas. El mismo horario sirve para SIB, APA y AVA.`;
     }catch(err){
       slotsMsg.className = "msg error";
       slotsMsg.textContent = err.message;
