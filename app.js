@@ -295,7 +295,7 @@
       <p class="help">
         Plan: <b>${htmlEscape(plan["Descripción"])}</b><br>
         Revisión: <b>SIB + APA + E-Learning</b><br>
-        Revisores: ${htmlEscape(REVISORES.SIB)}, ${htmlEscape(REVISORES.APA)} y ${htmlEscape(REVISORES.E-Learning)}.
+        Revisores: ${htmlEscape(REVISORES.SIB)}, ${htmlEscape(REVISORES.APA)} y ${htmlEscape(REVISORES.Rizoma)}.
       </p>
       <h3>1. Seleccione fecha</h3>
       <div class="date-grid" id="fechaGrid">
