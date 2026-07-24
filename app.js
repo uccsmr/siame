@@ -167,7 +167,7 @@
       renderResumenDocente(res);
       renderPlanes();
       if(planesActuales.length === 0){
-        showMsg("No se encontraron planes activos para el documento/correo ingresado.", "warn");
+        showMsg("No se encontraron cursos activos para el documento/correo ingresado.", "warn");
       }else{
         showMsg(`Se encontraron <b>${planesActuales.length}</b> planes de curso asignados.`, "ok");
       }
@@ -175,7 +175,7 @@
       showMsg(err.message + "<br><small>Prueba técnica: abra la URL /exec con ?action=diagnostico&payload=%7B%5C%22query%5C%22%3A%5C%22" + encodeURIComponent(query) + "%5C%22%7D</small>", "error");
     }finally{
       $("btnCargarPlanes").disabled = false;
-      $("btnCargarPlanes").textContent = "Cargar planes asignados";
+      $("btnCargarPlanes").textContent = "Cargar cursos asignados";
     }
   }
 
@@ -231,7 +231,7 @@
 
       let actionHtml = "";
       if(integral.allVisado){
-        actionHtml = `<div class="note-green">✅ Este plan ya cuenta con visado completo de SIB, APA y AVA.</div>`;
+        actionHtml = `<div class="note-green">✅ Este curso se encuentra verificado por SIB, APA y AVA.</div>`;
       }else if(integral.active){
         actionHtml = `
           <div class="note-green">
@@ -245,7 +245,7 @@
         `;
       }else{
         actionHtml = `
-          <div class="note-green">🗓️ Agende una sola cita para que el plan sea revisado por SIB, APA y AVA.</div>
+          <div class="note-green">🗓️ Agende una sola cita para que el curso sea verificado por SIB, APA y AVA.</div>
           <div class="actions-row">
             <button class="btn-green btn-small" data-action="agendar" data-plan="${idx}">Agendar cita integral</button>
           </div>
@@ -303,8 +303,8 @@
       </div>
       <h3>2. Seleccione jornada</h3>
       <div class="journey-grid">
-        <div class="choice sel" data-jornada="manana">🌞 Mañana<br><small>8:00 a.m. - 12:00 m.</small></div>
-        <div class="choice" data-jornada="tarde">🌇 Tarde<br><small>2:00 p.m. - 5:00 p.m.</small></div>
+        <div class="choice sel" data-jornada="manana">🌞 Mañana</div>
+        <div class="choice" data-jornada="tarde">🌇 Tarde</div>
       </div>
       <h3>3. Horarios disponibles</h3>
       <div id="slotsMsg" class="msg info">Cargando disponibilidad...</div>
@@ -501,7 +501,7 @@
     tabla.innerHTML = `
       <thead>
         <tr>
-          <th>Reserva</th><th>Fecha cita</th><th>Bloque</th><th>Docente</th>
+          <th>Reserva</th><th>Fecha cita</th><th>Bloque</th><th>Profesor</th>
           <th>Curso</th><th>Clase</th><th>Estado cita</th><th>SIB</th><th>APA</th><th>AVA</th>
         </tr>
       </thead>
@@ -577,7 +577,7 @@
     tabla.innerHTML = `
       <thead>
         <tr>
-          <th>Fecha/Hora</th><th>Docente</th><th>Plan de curso</th><th>Estado de este revisor</th><th>Acciones</th>
+          <th>Fecha/Hora</th><th>Docente</th><th>Curso</th><th>Estado de este revisor</th><th>Acciones</th>
         </tr>
       </thead>
       <tbody>
