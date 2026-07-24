@@ -201,7 +201,7 @@
   function getPlanEstadoIntegral(plan){
     const revisiones = plan.revisiones || [];
     const active = revisiones.find(r => r.citaActiva || estadoUpper(r.EstadoRevision) === "CITA_RESERVADA");
-    const allVisado = ["SIB","APA","Rizoma"].every(tipo => {
+    const allVisado = ["SIB","APA","E-Learning"].every(tipo => {
       const r = revisiones.find(x => x.TipoRevision === tipo);
       return r && estadoUpper(r.EstadoRevision) === "VISADO";
     });
@@ -216,7 +216,7 @@
       const revisiones = plan.revisiones || [];
       const integral = getPlanEstadoIntegral(plan);
 
-      const revHtml = ["SIB","APA","Rizoma"].map((tipo) => {
+      const revHtml = ["SIB","APA","E-Learning"].map((tipo) => {
         const rev = revisiones.find(r => r.TipoRevision === tipo) || {};
         const estado = rev.EstadoRevision || "PENDIENTE";
         return `
