@@ -245,7 +245,7 @@
         `;
       }else{
         actionHtml = `
-          <div class="note-green">🗓️ Agende una sola cita para que el curso sea revisado por SIB, APA y AVA.</div>
+          <div class="note-green">🗓️ Agende una sola cita para que el curso sea verificado por SIB, APA y AVA.</div>
           <div class="actions-row">
             <button class="btn-green btn-small" data-action="agendar" data-plan="${idx}">Agendar cita integral</button>
           </div>
