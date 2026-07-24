@@ -216,7 +216,7 @@
       const revisiones = plan.revisiones || [];
       const integral = getPlanEstadoIntegral(plan);
 
-      const revHtml = ["SIB","APA","E-Learning"].map((tipo) => {
+      const revHtml = ["SIB","APA","Rizoma"].map((tipo) => {
         const rev = revisiones.find(r => r.TipoRevision === tipo) || {};
         const estado = rev.EstadoRevision || "PENDIENTE";
         return `
