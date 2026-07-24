@@ -188,7 +188,7 @@
     }
     box.classList.remove("hidden");
     box.innerHTML = `
-      <h2>👤 Docente</h2>
+      <h2>👤 Profesor</h2>
       <div class="grid">
         <div><b>Nombre:</b><br>${htmlEscape(res.docente.nombre || "")}</div>
         <div><b>Documento:</b><br>${htmlEscape(res.docente.documento || "")}</div>
@@ -231,7 +231,7 @@
 
       let actionHtml = "";
       if(integral.allVisado){
-        actionHtml = `<div class="note-green">✅ Este plan ya cuenta con visado completo de SIB, APA y Rizoma.</div>`;
+        actionHtml = `<div class="note-green">✅ Este plan ya cuenta con visado completo de SIB, APA y E-Learning.</div>`;
       }else if(integral.active){
         actionHtml = `
           <div class="note-green">
