@@ -201,7 +201,7 @@
   function getPlanEstadoIntegral(plan){
     const revisiones = plan.revisiones || [];
     const active = revisiones.find(r => r.citaActiva || estadoUpper(r.EstadoRevision) === "CITA_RESERVADA");
-    const allVisado = ["SIB","APA","ELearning"].every(tipo => {
+    const allVisado = ["SIB","APA","AVA"].every(tipo => {
       const r = revisiones.find(x => x.TipoRevision === tipo);
       return r && estadoUpper(r.EstadoRevision) === "VISADO";
     });
@@ -216,7 +216,7 @@
       const revisiones = plan.revisiones || [];
       const integral = getPlanEstadoIntegral(plan);
 
-      const revHtml = ["SIB","APA","ELearning"].map((tipo) => {
+      const revHtml = ["SIB","APA","AVA"].map((tipo) => {
         const rev = revisiones.find(r => r.TipoRevision === tipo) || {};
         const estado = rev.EstadoRevision || "PENDIENTE";
         return `
@@ -295,7 +295,7 @@
       <p class="help">
         Plan: <b>${htmlEscape(plan["Descripción"])}</b><br>
         Revisión: <b>SIB + APA + E-learning</b><br>
-        Revisores: ${htmlEscape(REVISORES.SIB)}, ${htmlEscape(REVISORES.APA)} y ${htmlEscape(REVISORES.Rizoma)}.
+        Revisores: ${htmlEscape(REVISORES.SIB)}, ${htmlEscape(REVISORES.APA)} y ${htmlEscape(REVISORES.AVA)}.
       </p>
       <h3>1. Seleccione fecha</h3>
       <div class="date-grid" id="fechaGrid">
