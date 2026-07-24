@@ -39,6 +39,6 @@ window.SIRPC_CONFIG = {
   REVISORES: {
     SIB: "Marisorelis Carrillo Cantillo",
     APA: "Emilio Alfonso Lara",
-    Elearning: "Adriana Milena Jimenez Camacho"
+    AVA: "Adriana Milena Jimenez Camacho"
   }
 };
