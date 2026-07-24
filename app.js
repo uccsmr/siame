@@ -268,7 +268,7 @@
           <b>Modo:</b> ${htmlEscape(plan["Modo Enseñanza"])}
         </div>
         <div class="integral-box">
-          <h3>Revisión integral del plan</h3>
+          <h3>Revisión integral del curso</h3>
           <div class="integral-status">${revHtml}</div>
           ${actionHtml}
         </div>
