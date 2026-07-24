@@ -188,7 +188,7 @@
     }
     box.classList.remove("hidden");
     box.innerHTML = `
-      <h2>👤 Docente</h2>
+      <h2>👤 Profesor</h2>
       <div class="grid">
         <div><b>Nombre:</b><br>${htmlEscape(res.docente.nombre || "")}</div>
         <div><b>Documento:</b><br>${htmlEscape(res.docente.documento || "")}</div>
