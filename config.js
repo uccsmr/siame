@@ -6,7 +6,7 @@
    ============================================================================ */
 
 window.SIRPC_CONFIG = {
-  API_URL: "PEGUE_AQUI_LA_URL_EXEC_DE_GOOGLE_APPS_SCRIPT",
+  API_URL: "https://script.google.com/macros/s/AKfycbyMrFze11azkTmFGhjWkQ_b_91FWKeHbfuh_s_Y_7SgFyVgxFQHzmPXMcJnLS61f8pK/exec",
 
   VERSION: "20260724-HR05",
 
