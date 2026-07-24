@@ -1,6 +1,6 @@
 /* ============================================================================
    SIRPC · Frontend HOME RUN V4 · FIX CARGA DOCENTE
-   Agenda integral: un solo horario por plan de curso para SIB, APA y Rizoma.
+   Agenda integral: un solo horario por plan de curso para SIB, APA y E-Learning.
    Usa JSONP para evitar bloqueos CORS entre GitHub Pages y Google Apps Script.
    ============================================================================ */
 
@@ -13,7 +13,7 @@
   const REVISORES = CFG.REVISORES || {
     SIB: "Marisorelis Carrillo Cantillo",
     APA: "Emilio Alfonso Lara",
-    Rizoma: "Adriana Milena Jimenez Camacho"
+    E-Learning: "Adriana Milena Jimenez Camacho"
   };
   const HORARIOS = CFG.HORARIOS || { manana: [], tarde: [] };
   const FECHAS = CFG.FECHAS_DISPONIBLES || [];
@@ -216,7 +216,7 @@
       const revisiones = plan.revisiones || [];
       const integral = getPlanEstadoIntegral(plan);
 
-      const revHtml = ["SIB","APA","Rizoma"].map((tipo) => {
+      const revHtml = ["SIB","APA","E-Learning"].map((tipo) => {
         const rev = revisiones.find(r => r.TipoRevision === tipo) || {};
         const estado = rev.EstadoRevision || "PENDIENTE";
         return `
@@ -237,7 +237,7 @@
           <div class="note-green">
             📌 Cita integral reservada para <b>${htmlEscape(formatDate(integral.active.FechaCita))}</b>,
             bloque <b>${htmlEscape(rangoHorario(integral.active.HoraCita))}</b>, jornada <b>${htmlEscape(integral.active.Jornada)}</b>.<br>
-            Esta única cita aplica para SIB, APA y Rizoma.
+            Esta única cita aplica para SIB, APA y E-Learning.
           </div>
           <div class="actions-row">
             <button class="btn-danger btn-small" data-action="cancelar" data-plan="${idx}">Cancelar cita integral</button>
