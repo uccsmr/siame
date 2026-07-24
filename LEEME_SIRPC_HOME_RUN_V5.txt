@@ -1,0 +1,42 @@
+SIRPC HOME RUN V5 · FIX CARGA DOCENTE + AVA
+=================================================
+
+Versión final ajustada a la lógica actual:
+- Rizoma ahora se maneja visualmente como AVA.
+- Internamente Codigo.gs mantiene compatibilidad con registros antiguos tipo Rizoma.
+- Una sola cita integral por plan de curso.
+- La misma cita sirve para SIB, APA y AVA.
+- Horarios de 1 hora:
+  Mañana: 08:00, 09:00, 10:00, 11:00
+  Tarde: 14:00, 15:00, 16:00
+- Máximo 4 cupos por bloque.
+
+Encabezados actualizados:
+Index y Citas:
+Agendamiento Medios Educativos - Campus Santa Marta
+Alistamiento de Inicio de Clases 2620
+
+Revision:
+Agendamiento Medios Educativos - Panel Revisión - Campus Santa Marta
+Alistamiento de Inicio de Clases 2620
+
+PASOS:
+1. En Google Apps Script, reemplace todo Codigo.gs por el archivo Codigo.gs de esta carpeta.
+2. Guarde.
+3. Implementar > Administrar implementaciones > Editar > Nueva versión > Implementar.
+4. Copie o conserve la URL /exec.
+5. En config.js pegue la URL /exec en API_URL si no está configurada.
+6. En GitHub reemplace:
+   index.html
+   citas.html
+   revision.html
+   diagnostico.html
+   app.js
+   config.js
+   style.css
+   logo-ucc.png
+7. Abra con Ctrl + F5.
+
+IMPORTANTE:
+Si en la hoja Revisiones existen valores antiguos en TipoRevision = Rizoma, el Codigo.gs V5 los reconoce como AVA.
+Para dejar la base limpia, puede reemplazar Rizoma por AVA en la hoja Revisiones y en Revisores.
