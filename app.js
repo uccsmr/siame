@@ -304,7 +304,7 @@
       <h3>2. Seleccione jornada</h3>
       <div class="journey-grid">
         <div class="choice sel" data-jornada="manana">🌞 Mañana</div>
-        <div class="choice" data-jornada="tarde">🌇 Tarde></div>
+        <div class="choice" data-jornada="tarde">🌇 Tarde</div>
       </div>
       <h3>3. Horarios disponibles</h3>
       <div id="slotsMsg" class="msg info">Cargando disponibilidad...</div>
