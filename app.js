@@ -201,7 +201,7 @@
   function getPlanEstadoIntegral(plan){
     const revisiones = plan.revisiones || [];
     const active = revisiones.find(r => r.citaActiva || estadoUpper(r.EstadoRevision) === "CITA_RESERVADA");
-    const allVisado = ["SIB","APA","Rizoma"].every(tipo => {
+    const allVisado = ["SIB","APA","E-Learning"].every(tipo => {
       const r = revisiones.find(x => x.TipoRevision === tipo);
       return r && estadoUpper(r.EstadoRevision) === "VISADO";
     });
@@ -294,8 +294,8 @@
       <h2>🗓️ Agendar cita integral</h2>
       <p class="help">
         Plan: <b>${htmlEscape(plan["Descripción"])}</b><br>
-        Revisión: <b>SIB + APA + Rizoma</b><br>
-        Revisores: ${htmlEscape(REVISORES.SIB)}, ${htmlEscape(REVISORES.APA)} y ${htmlEscape(REVISORES.Rizoma)}.
+        Revisión: <b>SIB + APA + E-Learning</b><br>
+        Revisores: ${htmlEscape(REVISORES.SIB)}, ${htmlEscape(REVISORES.APA)} y ${htmlEscape(REVISORES.E-Learning)}.
       </p>
       <h3>1. Seleccione fecha</h3>
       <div class="date-grid" id="fechaGrid">
@@ -388,7 +388,7 @@
       });
 
       slotsMsg.className = "msg ok";
-      slotsMsg.textContent = `Cada bloque admite máximo ${MAX_CUPOS} reservas. El mismo horario sirve para SIB, APA y Rizoma.`;
+      slotsMsg.textContent = `Cada bloque admite máximo ${MAX_CUPOS} reservas. El mismo horario sirve para SIB, APA y E-Learning.`;
     }catch(err){
       slotsMsg.className = "msg error";
       slotsMsg.textContent = err.message;
@@ -502,7 +502,7 @@
       <thead>
         <tr>
           <th>Reserva</th><th>Fecha cita</th><th>Bloque</th><th>Docente</th>
-          <th>Curso</th><th>Clase</th><th>Estado cita</th><th>SIB</th><th>APA</th><th>Rizoma</th>
+          <th>Curso</th><th>Clase</th><th>Estado cita</th><th>SIB</th><th>APA</th><th>E-Learning</th>
         </tr>
       </thead>
       <tbody>
