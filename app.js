@@ -1,6 +1,6 @@
 /* ============================================================================
    SIRPC · Frontend HOME RUN V4 · FIX CARGA DOCENTE
-   Agenda integral: un solo horario por plan de curso para SIB, APA y Rizoma.
+   Agenda integral: un solo horario por plan de curso para SIB, APA y E-Learning.
    Usa JSONP para evitar bloqueos CORS entre GitHub Pages y Google Apps Script.
    ============================================================================ */
 
