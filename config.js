@@ -19,7 +19,10 @@ window.SIRPC_CONFIG = {
     "2026-07-28",
     "2026-07-29",
     "2026-07-30",
-    "2026-07-31"
+    "2026-07-31",
+    "2026-08-04",
+    "2026-08-05",
+    "2026-08-06"
   ],
 
   // Bloques de UNA HORA.
@@ -36,6 +39,6 @@ window.SIRPC_CONFIG = {
   REVISORES: {
     SIB: "Marisorelis Carrillo Cantillo",
     APA: "Emilio Alfonso Lara",
-    Rizoma: "Adriana Milena Jimenez Camacho"
+    ELearning: "Adriana Milena Jimenez Camacho"
   }
 };
