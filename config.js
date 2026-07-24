@@ -1,7 +1,7 @@
 /* ============================================================================
    SIRPC · Configuración general HOME RUN V4 · FIX CARGA DOCENTE
    - Una sola cita por plan de curso.
-   - Esa misma cita sirve para los tres revisores: SIB, APA y Rizoma.
+   - Esa misma cita sirve para los tres revisores: SIB, APA y AVA.
    - Los horarios son bloques de 1 hora.
    ============================================================================ */
 
