@@ -167,9 +167,9 @@
       renderResumenDocente(res);
       renderPlanes();
       if(planesActuales.length === 0){
-        showMsg("No se encontraron cursos activos para el documento/correo ingresado.", "warn");
+        showMsg("No se encontraron cursos activos para el documento ingresado.", "warn");
       }else{
-        showMsg(`Se encontraron <b>${planesActuales.length}</b> planes de curso asignados.`, "ok");
+        showMsg(`Se encontraron <b>${planesActuales.length}</b> cursos asignados.`, "ok");
       }
     }catch(err){
       showMsg(err.message + "<br><small>Prueba técnica: abra la URL /exec con ?action=diagnostico&payload=%7B%5C%22query%5C%22%3A%5C%22" + encodeURIComponent(query) + "%5C%22%7D</small>", "error");
