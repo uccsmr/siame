@@ -153,7 +153,7 @@
     clearMsg();
     const query = $("txtConsulta").value.trim();
     if(!query){
-      showMsg("Ingrese documento o correo institucional.", "warn");
+      showMsg("Ingrese documento.", "warn");
       return;
     }
     $("btnCargarPlanes").disabled = true;
@@ -167,15 +167,15 @@
       renderResumenDocente(res);
       renderPlanes();
       if(planesActuales.length === 0){
-        showMsg("No se encontraron planes activos para el documento/correo ingresado.", "warn");
+        showMsg("No se encontraron cursos activos para el documento ingresado.", "warn");
       }else{
-        showMsg(`Se encontraron <b>${planesActuales.length}</b> planes de curso asignados.`, "ok");
+        showMsg(`Se encontraron <b>${planesActuales.length}</b> Curso asignados.`, "ok");
       }
     }catch(err){
       showMsg(err.message + "<br><small>Prueba técnica: abra la URL /exec con ?action=diagnostico&payload=%7B%5C%22query%5C%22%3A%5C%22" + encodeURIComponent(query) + "%5C%22%7D</small>", "error");
     }finally{
       $("btnCargarPlanes").disabled = false;
-      $("btnCargarPlanes").textContent = "Cargar planes asignados";
+      $("btnCargarPlanes").textContent = "Cargar cursos asignados";
     }
   }
 
@@ -193,7 +193,7 @@
         <div><b>Nombre:</b><br>${htmlEscape(res.docente.nombre || "")}</div>
         <div><b>Documento:</b><br>${htmlEscape(res.docente.documento || "")}</div>
         <div><b>Correo:</b><br>${htmlEscape(res.docente.correo || "")}</div>
-        <div><b>Planes activos:</b><br>${htmlEscape(res.planes ? res.planes.length : 0)}</div>
+        <div><b>Cursos activos:</b><br>${htmlEscape(res.planes ? res.planes.length : 0)}</div>
       </div>
     `;
   }
@@ -231,7 +231,7 @@
 
       let actionHtml = "";
       if(integral.allVisado){
-        actionHtml = `<div class="note-green">✅ Este plan ya cuenta con visado completo de SIB, APA y E-learning.</div>`;
+        actionHtml = `<div class="note-green">✅ Este está verificado completamente por SIB, APA y E-learning.</div>`;
       }else if(integral.active){
         actionHtml = `
           <div class="note-green">
@@ -245,7 +245,7 @@
         `;
       }else{
         actionHtml = `
-          <div class="note-green">🗓️ Agende una sola cita para que el plan sea revisado por SIB, APA y E-learning.</div>
+          <div class="note-green">🗓️ Agende una sola cita para que el curso sea revisado por SIB, APA y E-learning.</div>
           <div class="actions-row">
             <button class="btn-green btn-small" data-action="agendar" data-plan="${idx}">Agendar cita integral</button>
           </div>
@@ -268,7 +268,7 @@
           <b>Modo:</b> ${htmlEscape(plan["Modo Enseñanza"])}
         </div>
         <div class="integral-box">
-          <h3>Revisión integral del plan</h3>
+          <h3>Revisión integral del curso</h3>
           <div class="integral-status">${revHtml}</div>
           ${actionHtml}
         </div>
