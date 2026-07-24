@@ -1,0 +1,47 @@
+SIRPC HOME RUN V3 · Repositorio V2
+======================================
+
+Base actualizada desde: Repositorio_V2.xls
+Fecha de generación: 2026-07-23 16:36:21
+
+RESUMEN DE LA BASE
+- Registros origen: 3683
+- Planes únicos reales cargados en PlanesCurso: 2828
+- Procesos de revisión creados: 8484
+- Docentes únicos reales: 326
+- Registros excluidos: 533
+- Duplicados separados: 322
+
+LÓGICA DEL SISTEMA
+- Una sola cita integral por plan de curso.
+- Esa cita sirve para SIB, APA y Rizoma.
+- Horarios de una hora:
+  Mañana: 08:00, 09:00, 10:00, 11:00
+  Tarde: 14:00, 15:00, 16:00
+- Máximo 4 cupos por horario.
+- Cada revisor marca su resultado: VISADO, CON_OBSERVACIONES o NO_ASISTIO.
+
+PASOS RÁPIDOS
+1. Sube Plantilla_SIRPC_HOME_RUN_V3_Repositorio_V2.xlsx a Google Drive.
+2. Ábrela con Google Sheets.
+3. Entra a Extensiones > Apps Script.
+4. Borra todo el contenido de Código.gs.
+5. Pega el contenido de Codigo.gs de este paquete.
+6. Implementa como Aplicación web:
+   - Ejecutar como: Yo
+   - Quién tiene acceso: Cualquier usuario
+7. Copia la URL que termina en /exec.
+8. Pega esa URL en config.js, en API_URL.
+9. Sube a GitHub:
+   - index.html
+   - citas.html
+   - revision.html
+   - app.js
+   - config.js
+   - style.css
+   - logo-ucc.png
+10. Abre la página con Ctrl + F5.
+
+IMPORTANTE
+Si ya tienes citas reales en otro Google Sheets, no reemplaces la hoja Citas sin hacer respaldo.
+Para pruebas o cambio de periodo, se recomienda usar este Google Sheet nuevo limpio.
