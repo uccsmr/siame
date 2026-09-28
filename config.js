@@ -8,7 +8,7 @@
 window.SIRPC_CONFIG = {
   API_URL: "https://script.google.com/macros/s/AKfycbxm3-FD1y78DYaiVBQtKsXB5c8BjGiy4_IDHS5Xu094xYPiFgmg6VkkzO8e8pc6uNLE/exec",
 
-  VERSION: "20260724-HR05",
+  VERSION: "20260927-V7",
 
   MAX_CUPOS_HORARIO: 4,
 
